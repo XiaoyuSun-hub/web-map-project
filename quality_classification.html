@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GFM Q3C1 Group one</title>
+  
+  <!-- styles -->
+ <!-- styles -->
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans|Baumans' type='text/css'>
+  <link rel="stylesheet" href="styles/reset.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="styles/main.css" type="text/css" media="screen" />  
+  <link rel="stylesheet" href="styles/viewer.css" type="text/css" media="screen"/>
+  <link rel="stylesheet" href="styles/ol3-layerswitcher.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="https://gisedu.itc.utwente.nl/exercise/libraries/openlayers/v4.6.4/ol.css" 
+    type="text/css"/> 
+ 
+
+  <!-- scripts -->
+  <script src="https://gisedu.itc.utwente.nl/exercise/libraries/openlayers/v4.6.4/ol.js"></script>  
+  <script src="scripts/viewer.js"></script> 
+  <script src="https://gisedu.itc.utwente.nl/exercise/libraries/d3js/v4.13.0/d3.min.js"></script>
+  <script src="https://gisedu.itc.utwente.nl/exercise/libraries/d3js/d3-tip_v4/d3-tip.js"></script>
+  <script src="scripts/ol3-layerswitcher.js"></script>
+   
+</head>
+ <body onload="init()">
+
+<div class="container header">
+    <header>
+      <!--<h1>A Website by GFM Group One</h1>-->
+      <h1>Quality - Classified Image </h1>
+	  <br>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li class ="active"><a href="quality_classification.html">Quality of Classification</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+  </div>
+  
+<body onload="init()">
+
+  </section>
+
+ <section id="spacer">
+    <!-- Info Bar -->
+    <p></p>
+  </section> <!-- spacer -->
+ <br class='clear'>
+<section class="one-column">
+ 
+  <section class="container">
+  <br>
+ <h2>Uncertainty of the Product</h2>
+ <br>
+<p>The selection of training samples can cause uncertainty in classification. The input layer is 9, so at least 10 samples of ML classifier are enough. Also, the training samples should be distributed separately in feature space. In order to reduce the uncertainty resulted by training sample, some of the similar classes can be merged. In this case, the original classes ‘crop1’(rapeseed) and ‘crop2’ (maize) are combined into ‘crop’. the original classes ‘forest1’ (deciduous), ‘forest2’ (evergreen) and forest3 (heath) are combined into ‘forest’. The pair separation of the training samples can be a reference to the uncertainty. The relatively short distance occurs in crop and grass (1.9918), building and forest (1.9962) and grass and forest (1.9974).</p>
+<p>Spectral resolution, radiometric resolution and spatial resolution can make a difference to the uncertainty. In this case 9 bands are used to make the classification, with the wavelength from 0.49μm to 2.19μm. The spatial resolution is from 10m to 20m. </p>
+<p>Different settings of parameter in classification algorithm are also reasons of uncertainty. In maximum likelihood classification, selection of the threshold probability value can make a difference. And in support vector machine classification, selection of proper kernel function can make a difference. In this case, the threshold probability value of MLC is selected automatically by software and the selected kernel function is radial basis function. </p>
+<p>The producer accuracy of each class can be used to visualize the uncertainty in a map.  </p>
+ <div>
+      <img src="images/uncertainty_map/UncertaintyMap_MLC.jpg"  style="width:450px;height:500px; padding:20px;
+  margin-left: auto;
+  "/>
+     <img src="images/uncertainty_map/UncertaintyMap_SVM.jpg"  style="width:450px;height:500px;padding:20px; margin-right: auto;"/>
+	 </div>
+	 <div>
+	 <img src="images/uncertainty_map/Legend of Uncertainty Map.png"  style="width:210px;height:80px;padding:5px;"/>
+	 <img src="images/uncertainty_map/Legend of Uncertainty Map.png"  style="width:210px;height:80px;padding:5px;margin-left:240px;margin-right: auto;"/>
+	 </div>
+	 <p>Uncertainty map of maxium likelihood classification&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Uncertainty map of support vector machine classification</p>
+
+</section>
+  <section class="container">
+<h2>Assessment of Accuracy</h2>
+<br>
+<img src="images/accuracy_class.jpeg" style="width:1100px;height:200px;"/>
+	<p>With the reference sample, confusion matrix can be generated to represent the accuracy of classification. The overall accuracy and kappa coefficient of MLC are 90.9330% and 0.8878, and for SVM is 96.4601% and 0.9561. Both of them show the high accuracy in classification, and the quality of SVM is better.</p>
+<p>According to each class, the user accuracy of building in MLC is low, with the value of 61.41%, which is 97.9% in SVM. It means that other kinds of objects are likely to be classified into building with the algorithm of MLC, especially for the baresoil and water. And the producer accuracy of baresoil and crop with MLC are 71.91% and 77.15%. Some of the baresoil are classified into building, and some crop are classified into grass.
+ </p>
+ 
+ 
+  <h2>Comparison of the Classified Image with Exsiting Geo-information</h2>
+  
+  <p>The classified image can be compared with OpenStreetMap, which includes the landcover information of this area. The OpenStreetMap shows a river in the north-west of city, while in MLC image it has been classified into building. Another problem is the road is not classified because of the selection of training sample.   </p>
+ <p>
+  In order to evaluate the quality of the classification product, we can refer to the official document of Sentinel-2 L2A data quality report, which indicates that overall accuracy for 14 classification products generated by sentienl-2 image reaches 81.1±14.1%. The overall accuracy of our product (90.93% and 96.46%) is higher than the average level.
+ </p>
+<br class='clear'>
+</div>
+</section>
+</section>
+  <footer>
+    <!-- Copyright notice -->
+    <section id="copyright">
+      <div class="wrapper">
+        <div class="social">
+          <a href="https://mail.google.com/mail/"><img src="images/icon-link-3.png" alt="google plus" width="25"/></a>
+        </div>        &copy; Copyright 2019 by 
+        <a href="https://www.itc.nl/geoinformatics">MGEO - Geoinformatics Program</a>. 
+        All Rights Reserved.
+      </div>
+    </section> <!-- copyright -->
+
+    
+    <!-- Footer content -->
+    <section class="wrapper">
+      <article class="column">
+        <h4>About Us</h4>
+        A platform for featuring photogrammetric products for the geoinformation student community world-wide in association with ITC, University of Twente.
+      </article>
+      
+      <article class="column midlist">
+        <h4>Links & Citations</h4>
+        <ul>
+        <li><a href="https://cgiarcsi.community/data/srtm-90m-digital-elevation-database-v4-1/">Consortium for Spatial Information</a></li>
+        <li><a href="https://www.researchgate.net/publication/225091458_Hole-filled_seamless_SRTM_data_V4_Tech_rep_International_Centre_for_Tropical_Agriculture_CIAT">
+    Article on SRTM</a></li>
+        <li><a href="https://sentinel.esa.int/documents/247904/685211/Sentinel-2-L2A-Data-Quality-Report">Sentinel-2-L2A Data Quality Report</a></li>
+        
+      </article>
+      
+     <article class="column rightlist">
+        <h4>Organisation</h4>
+        <ul>
+          <li><a href="https://www.itc.nl">
+            <img src="images/itc-link.png" width="80" alt="some alt text"/>
+            <span>ITC Faculty, University of Twente</span>
+          </a></li>
+          
+        </ul>
+      </article>
+    </section>
+  </footer>    
+
+
+</body>
+</html>

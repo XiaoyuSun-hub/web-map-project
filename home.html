@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GFM Q3C1 Group one</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- styles -->
+ <!-- styles -->
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans|Baumans' type='text/css'>
+  <link rel="stylesheet" href="styles/reset.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="styles/main.css" type="text/css" media="screen" />  
+  <link rel="stylesheet" href="styles/viewer.css" type="text/css" media="screen"/>
+  <link rel="stylesheet" href="styles/ol3-layerswitcher.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="https://gisedu.itc.utwente.nl/exercise/libraries/openlayers/v4.6.4/ol.css" 
+    type="text/css"/> 
+ 
+
+  <!-- scripts -->
+  <script src="https://gisedu.itc.utwente.nl/exercise/libraries/openlayers/v4.6.4/ol.js"></script>  
+  <script src="scripts/viewer.js"></script> 
+  <script src="https://gisedu.itc.utwente.nl/exercise/libraries/d3js/v4.13.0/d3.min.js"></script>
+  <script src="https://gisedu.itc.utwente.nl/exercise/libraries/d3js/d3-tip_v4/d3-tip.js"></script>
+  <script src="scripts/ol3-layerswitcher.js"></script>
+   
+</head>
+ <body onload="init()">
+
+<div class="container header">
+    <header>
+      <h1>Photogrammetric Products</h1>
+      <br>
+      <nav>
+        <ul>
+		
+          <li class="active"><a href="home.html">Home</a></li>
+		  <li class="dropdown">
+			<a href="javascript:void(0)" class="dropbtn">Products</a>
+			 <i class="fa fa-caret-down"></i>
+				<div class="dropdown-content">
+					<a href="product_classification.html">Classification Image</a>
+					<a href="product_DTM.html">DTM</a>
+				</div>
+			<li class="dropdown">	
+			<a href="javascript:void(0)" class="dropbtn">Quality</a>
+			 <i class="fa fa-caret-down"></i>
+				<div class="dropdown-content">
+					<a href="quality_classification.html">Quality of classification</a>
+					<a href="quality_DTM.html">Quality of DTM</a>
+				</div>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  
+<body onload="init()">
+<!--   <section class="container header">
+    <header>
+      <h1>Group one work show</h1>
+	  <br>
+     <nav>
+        <ul>
+          <li><a href=".">Home</a></li>
+          <li class="active"><a href="javascript:void(0)">Data Viewer</a></li>
+          <li><a href="javascript:void(0)">Examples</a></li>
+          <li><a href="javascript:void(0)">Contact</a></li>
+        </ul>
+      </nav> 
+    </header> 
+  </section>-->
+  <section class ="one-column">
+  <section class="container">
+  <br>
+ 
+  <h2>Introduction </h2>
+  
+  <p> This website contains two classification Images and a Digital Terrain Model (DTM) as the main photogrammetric products. The classified images follow
+	   the "Maximum Likelihood Classification" and "Support Vector Machine Classification" algorithm. The DTM is generated for a region in Germany and visualised by overlaying it upon the Open Street Map data.
+	   </p>
+	 <p> The workflow of each of the products is breifly described and its quality aspects are discussed. Further, a comparative analysis is drawn
+	 to understand the quality of the generated product with the existing ones. </p>
+	 <br>
+	 <br>
+
+<h2> Web Architecture </h2>
+ <br>
+<img src="images/web_arc.jpeg"  alt="web architecture"/>
+<br>
+<p>The website architecture contains two parts: web client and web server.
+</p>
+<p>The client side use OpenLayer to display map tiles and vector data.
+
+Server side contains three different servers.</p>
+
+<p>OpenStreetMap is a map server provide a worldwide map which is used as the base map.</p>
+
+<p>CGI python provide the vector data of the provinces of the Netherlands in JSON format.These data are fetched from the database using queries via CGI python.</p>
+
+<p>MapServer provide the WMS service which contains DTM and Classification Images we produced.</p>
+<p>Web Map Service Interface Standard (WMS) is a standard protocol developed by the Open Geospatial Consortium. It provides a simple HTTP interface for requesting geo-registered map images from one or more distributed geospatial databases. 
+A WMS request defines the geographic layer(s) and area of interest to be processed. The response to the request is one or more geo-registered map images.</p>
+<p>MapServer implements WMS features, it supports the different WMS versions. MapServer has a setting up .map file.This website publishes the photogrammetric products by changing configuration of .map file.Then map server could
+	 provide WMS service containing map tiles of our products.</p>
+	 
+	 <br>
+
+
+            
+ <!--<section id="spacer">-->
+    <!-- Info Bar -->
+    <!--<p>Visualizations created using OpenLayers, MapServer & D3 by Group One</p>-->
+  <!--</section> <!-- spacer -->
+ <!--<br class='clear'>-->
+  <!-- Chart Section -->
+  <!--<section class="column">
+    <article id="bar_chart">
+      <h2>Bar Chart</h2>
+      <div id="chart_container"></div>
+    </article> 
+    <br class="clear"/>
+  </section> 
+  <section id="introduction">-->
+
+
+
+ <h2> Products </h2> 
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="product_classification.html">
+      <img src="images/mlc.png" alt="mlc image" style="width:300px;height:300px; padding:20px;
+  margin-left: auto;
+  "/>
+    </a>
+    <div class="desc">Supervised Classification Image</div>
+	<p>Two classification images of Enschede. using the "Maximum Likelihood Classification" and "Support Vector Machine " algorithm. </p>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="product_DTM.html">
+      <img src="images/dtm.png" alt="DTM comparison" style="width:300px;height:300px;padding:20px; margin-right: auto;"/>
+    </a>
+    <div class="desc">Digital Terrain Model</div>
+	<p>A digital elevation model using photogrammetric techniques, featuring a region of Germany. </p>
+
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+<div style="padding:6px;">
+  
+</div>
+</section>
+</section>
+
+  <footer>
+    <!-- Copyright notice -->
+    <section id="copyright">
+      <div class="wrapper">
+        <div class="social">
+          <a href="https://mail.google.com/mail/"><img src="images/icon-link-3.png" alt="google plus" width="25"/></a>
+        </div>        &copy; Copyright 2019 by 
+        <a href="https://www.itc.nl/geoinformatics">MGEO - Geoinformatics Program</a>. 
+        All Rights Reserved.
+      </div>
+    </section> <!-- copyright -->
+
+    
+    <!-- Footer content -->
+    <section class="wrapper">
+      <article class="column">
+        <h4>About Us</h4>
+        A platform for featuring photogrammetric products for the geoinformation student community world-wide in association with ITC, University of Twente.
+      </article>
+      
+      <article class="column midlist">
+        <h4>Links & Citations</h4>
+        <ul>
+        <li><a href="https://cgiarcsi.community/data/srtm-90m-digital-elevation-database-v4-1/">Consortium for Spatial Information</a></li>
+        <li><a href="https://www.researchgate.net/publication/225091458_Hole-filled_seamless_SRTM_data_V4_Tech_rep_International_Centre_for_Tropical_Agriculture_CIAT">
+		Article on SRTM</a></li>
+         <li><a href="https://sentinel.esa.int/documents/247904/685211/Sentinel-2-L2A-Data-Quality-Report">Sentinel-2-L2A Data Quality Report</a></li>
+      </article>
+      
+     <article class="column rightlist">
+        <h4>Organisation</h4>
+        <ul>
+          <li><a href="https://www.itc.nl">
+            <img src="images/itc-link.png" width="80" alt="some alt text"/>
+            <span>ITC Faculty, University of Twente</span>
+          </a></li>
+          
+        </ul>
+      </article>
+    </section>
+  </footer>    
+
+
+</body>
+</html>

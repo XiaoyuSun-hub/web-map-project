@@ -1,0 +1,595 @@
+/*----------------------------------------------------------------
+  Name:        main.css
+  Date:        November 2019
+  Description: Base styles for the - Web Programming - exercise
+			   (landing page)
+  Version:     2.0
+----------------------------------------------------------------*/
+
+/* ------ */
+/* Global */
+/* ------ */
+body {
+  font-family:'Open Sans', sans-serif;
+  border-top:15px solid #708090;
+  background:#ffffff;
+  color:#333333;
+}
+h1	{
+	font-family:'Open Sans', sans-serif;
+	font-weight: bold;
+	font-size : 25px;
+	
+	
+}
+h2	{
+	font-family:'Open Sans', sans-serif;
+	font-weight: bold;
+	font-size : 25px;
+	border-style: solid;
+	border: 0px solid #ccc;
+	background: #ccc;
+}
+img {
+	border: 2px solid #ccc;
+	position :center;
+	
+	
+}
+p {
+  margin:15px 0;
+  line-height:25px;
+}
+
+a {
+  text-decoration:none;
+  color:inherit;
+  transition:color .5s ease;
+}
+
+a:hover {
+  color:#2F4F4F;
+}
+
+strong {
+  font-weight:bold;
+}
+
+hr {
+  background-color:#D6D0C1	;
+  border:10;
+  height:1px;
+  margin:20px 0;
+}
+
+figcaption {
+  line-height:25px;
+  font-size:14px;
+  width:200px;
+}
+
+figcaption strong {
+  border-bottom:1px solid #D6D0C1;
+  padding-bottom:10px;
+  margin:10px 0;
+  display:block;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+
+
+.clear {
+  clear:both;
+}
+
+/*--------*/
+/* Header */
+/*--------*/
+.container {
+  width:100%;
+  padding:30px;
+  position:center
+}
+ 
+.container.header {
+  background:rgba(0,128,128);
+  height:auto;
+  width:100%;
+}
+header {
+  position:relative;
+  width:auto;
+  max-width:900px;
+  margin:0 auto 20px auto;
+}
+ 
+header h1 {
+  margin:30px 0 0 0;
+  margin-left:100px;  
+  font-size:50px;
+  color:	#000000;
+  font-family:'TimesNewRoman', cursive;
+  
+}
+ 
+header p {
+  font-size:25px;
+  color:#000000;
+  margin-left:100px;
+  margin-bottom: 20px;
+}
+nav {
+  position:left;
+  margin-left:50px;
+  right:0;
+  bottom:0;
+}
+ 
+nav ul {
+  list-style:none;
+  margin-left:50px;
+}
+ 
+nav ul li {
+  display:block;
+  float:left;
+  padding:3px 10px;
+}
+ 
+nav ul li a {
+  
+  transition:all .25s ease;
+}
+ 
+nav ul li.active {
+  background:#AFEEEE;
+}
+ 
+nav ul li.active a{
+  color:#9164d6;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* nav element dropdown menu */
+
+
+
+ .dropbtn {
+  display: inline-block;
+  color: black;
+  text-align: center;
+ 
+  text-decoration: none;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+
+
+/* Main column */
+.main {
+  flex: 70%; /* Set the width of the main content */
+  background-color: white; /* White background color */
+  padding: 30px; /* Some padding */
+}
+ 
+/*--------*/
+/* Spacer */
+/*--------*/
+#spacer {
+  width:auto;
+  height:20px;
+  background-color:	#708090;
+  position:relative;
+  color:#fff;
+  font-size:18px;
+}
+ 
+#spacer p {
+  margin-top:22px;
+  width:auto;
+  position:absolute;
+  left:50%;
+  margin-left:-450px;
+}
+
+/*----------*/
+/* Features */
+/*----------*/
+#featured_content {
+  width:auto;
+  max-width:900px;
+  margin:0 auto;
+  padding:50px 0 45px 0;
+  text-align: center;
+}
+ 
+ 
+#featured_content article {
+  display: inline-flex;
+  width:250px;
+  font-size:14px;
+  margin: 0 10px;
+  position:relative;
+}
+ 
+#featured_content article p {
+  line-height:25px;
+}
+ 
+#featured_content article h3 {
+  font-size:20px;
+  padding-top: 140px;
+  margin-bottom:10px;
+}
+ 
+#featured_content article img {
+  position:absolute;
+  top:20px;
+  left:85px;
+  transition: opacity .5s ease-in-out;
+}
+ 
+#featured_content article a:hover {
+  color:#9164d6;
+}
+ 
+#featured_content article a:hover > img.top-icon {
+  opacity:0;
+}
+/*-------*/
+/* Atlas */
+/*-------*/
+.container.four-cols {
+  background:rgba(242,242,242,0.6);
+  height:auto;
+  padding-bottom:20px;
+}
+ 
+#atlas_columns, #cloud_columns {
+  line-height:25px;
+  clear:both;
+  width:auto;
+  max-width:900px;
+  margin:0 auto;
+}
+ 
+#atlas_columns h2, #cloud_columns h3 {
+  font-size:20px;
+  border-bottom:1px solid #D6D0C1;
+  padding:20px 0;
+  margin-bottom: 20px;
+}
+ 
+#atlas_columns .img-item {
+  float:left;
+  margin:0 25px 20px 0;
+}
+ 
+#atlas_columns .img-item a {
+  position:relative;
+  display:block;
+}
+ 
+.thumb-screen {
+  display:block;
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:110px;
+  background:#000;
+  z-index:99;
+  opacity:0;
+  transition: opacity .5s ease;
+}
+ 
+.thumb-screen:hover {
+  opacity:0.3;
+}
+/* /* /*-------*/
+/* Cloud */
+/*-------*/
+#cloud_columns article.column1, #cloud_columns .column2 {
+  margin: 40px 0;
+  font-size:14px;
+  float:left;
+  width:auto;
+  max-width:450px;
+}
+ 
+#cloud_columns .column2 {
+  margin:90px 0;
+}
+ 
+ 
+ 
+ 
+ /* contact page */
+ 
+ * {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #ccc;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: center;
+}
+input[type=submit]:hover {
+  background-color: #black;
+  float:center;
+}
+
+.container {
+  
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+ 
+  /* contact page */
+ 
+/*--------*/
+/* Footer */
+/*--------*/
+footer {
+  position:relative;
+  clear:both;
+  width:auto;
+  height:300px;
+  background:#333333;
+}
+ 
+footer .rightlist img {
+  width:80px;
+}
+ 
+footer .wrapper {
+  line-height:25px;
+  margin: 0 auto;
+  padding-top:30px;
+  width:auto;
+  max-width:900px;
+  font-size:14px;
+}
+ 
+footer .wrapper .column {
+  font-family: 'Open Sans', sans-serif;
+  color:#ababab;
+  float:left;
+  width:280px;
+  margin-right:20px;
+}
+
+footer .wrapper .column h4 {
+  font-size: 16px;
+  color:#fff;
+  border-bottom: 1px solid #444444;
+  padding:0 0 10px 0;
+  margin-bottom: 10px;
+}
+ 
+footer .wrapper .column.midlist ul li {
+  display:block;
+  width:auto;
+  padding:0 0 10px 25px;
+  margin-bottom:8px;
+  border-bottom:2px solid #444444;
+  background:url(../images/arrowright.png) left 6px no-repeat;
+}
+ 
+footer .wrapper .column.midlist ul li a:hover {
+  color:#fff;
+}
+ 
+footer .wrapper .column.rightlist ul li {
+  display:block;
+  width:auto;
+  margin-bottom:15px;
+}
+ 
+footer .wrapper .column.rightlist ul li a span {
+  margin-left:95px;
+  display:block;
+  height:34px;
+}
+ 
+footer .wrapper .column.rightlist ul li a img {
+  transition: border .25s ease;
+  float:left;
+  border:3px solid #444444;
+}
+ 
+footer .wrapper .column.rightlist ul li a img:hover {
+  border-color:#5e5e5e;
+}
+
+#copyright {
+  background:#1D1D1D;
+  height:70px;
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+}
+#copyright .wrapper {
+  padding-top:25px;
+  color: #5e5e5e;
+  font-size:14px;
+  position:relative;
+}
+#copyright .wrapper .social {
+  position:absolute;
+  right:0;
+  top:25px;
+}
+#copyright .wrapper .social a {
+  transition:opacity .25s ease;
+  opacity:0.3;
+  margin-left:12px;
+  display:block;
+  float:left;
+}
+#copyright .wrapper .social a:hover {
+  opacity:0.7;
+}
+#copyright .wrapper a {
+  color:#ABABAB;
+}
+ 
+#copyright .wrapper a:hover {
+  color:#fff;
+}
+
+/*contact page */
+
+div img1{
+  border: 3px solid #000000;
+  padding: 5px;
+}
+
+.img1 {
+  float: right;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+.img2 {
+  float: right;
+}
+.clearfix {
+  overflow: auto;
+}
+.img3 {
+  float: right;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+.img4 {
+  float: right;
+}
+
+.img5 {
+  float: right;
+}
+
+.clearfix {
+  overflow: auto;
+}
+

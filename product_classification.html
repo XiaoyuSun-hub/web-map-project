@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GFM Q3C1 Group one</title>
+  
+  <!-- styles -->
+ <!-- styles -->
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans|Baumans' type='text/css'>
+  <link rel="stylesheet" href="styles/reset.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="styles/main.css" type="text/css" media="screen" />  
+  <link rel="stylesheet" href="styles/viewer.css" type="text/css" media="screen"/>
+  <link rel="stylesheet" href="styles/ol3-layerswitcher.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="https://gisedu.itc.utwente.nl/exercise/libraries/openlayers/v4.6.4/ol.css" 
+    type="text/css"/> 
+ 
+
+  <!-- scripts -->
+  <script src="https://gisedu.itc.utwente.nl/exercise/libraries/openlayers/v4.6.4/ol.js"></script>  
+  <script src="scripts/viewer.js"></script> 
+  <script src="https://gisedu.itc.utwente.nl/exercise/libraries/d3js/v4.13.0/d3.min.js"></script>
+  <script src="https://gisedu.itc.utwente.nl/exercise/libraries/d3js/d3-tip_v4/d3-tip.js"></script>
+  <script src="scripts/ol3-layerswitcher.js"></script>
+   
+</head>
+ <body onload="init()">
+
+<div class="container header">
+    <header>
+      <h1>Classified Image</h1>
+     <br>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="quality_classification.html">Quality of classification</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  
+<body onload="init()">
+
+  </section>
+
+
+  <br>
+  
+ <br class='clear'>
+
+  
+  <section id="introduction">
+  </section>
+ <section class="one-column">
+ <section class="container">
+      <h2> Land-use Classification of Enschede</h2>
+	  <br>
+      <div id="map_container1"></div>
+	  <div id="legend" style="position:relative; width:644px; height:56px; left: 5px; top: 5px; ">
+		<img align="centre" src="images/classification_legend_new.png" style="width:640px;height:50px";/>
+		<br/>
+	</div>
+	  <br>
+	  <br>
+	  <h2>Description </h2>
+	<br>	 
+	 <p>The original image that was chosen to make the supervised classification is Sentinel-2A satellite image of Enschede at 25 September2016.
+	 9 spectral bands are used to make the classification, with a resolution from 10m to 20m.
+	 Training sample and reference sample are interpreted from the original image. And the pixel-based algorithms of maximum likelihood classification (MLC) 
+	 and support vector machine (SVM) are used to classify the image. It can then be analyzed for the uncertainty and quality according to the method used and the accuracy report can be generated. 
+	 </p> 
+	<br>	
+	<h2>Workflow</h2>
+	 <br>
+	 <div id="workflow" style="position:relative; width:1154px; height:224px; left: 5px; top: 5px; ">
+		<img align="left" src="images/workflow_classification.png" style="width:1150px;height:220px";/>
+	</div>
+  </section>	 
+  </section>	  
+  <!-- Pagination -->
+
+<div class="center">
+  <div class="pagination">
+  
+  <a href="product_classification.html"class="active" >1</a>
+  <a href="product_DTM.html">2</a>
+  
+  </div>
+</div>
+<style>
+.center {
+  text-align: center;
+}
+</style>
+
+<!-- Pagination -->
+  
+
+
+ <footer>
+    <!-- Copyright notice -->
+    <section id="copyright">
+      <div class="wrapper">
+        <div class="social">
+          <a href="https://mail.google.com/mail/"><img src="images/icon-link-3.png" alt="google plus" width="25"/></a>
+        </div>        &copy; Copyright 2019 by 
+        <a href="https://www.itc.nl/geoinformatics">MGEO - Geoinformatics Program</a>. 
+        All Rights Reserved.
+      </div>
+    </section> <!-- copyright -->
+
+    
+    <!-- Footer content -->
+    <section class="wrapper">
+      <article class="column">
+        <h4>About Us</h4>
+        A platform for featuring photogrammetric products for the geoinformation student community world-wide in association with ITC, University of Twente.
+      </article>
+      
+      <article class="column midlist">
+        <h4>Links & Citations</h4>
+        <ul>
+        <li><a href="https://cgiarcsi.community/data/srtm-90m-digital-elevation-database-v4-1/">Consortium for Spatial Information</a></li>
+        <li><a href="https://www.researchgate.net/publication/225091458_Hole-filled_seamless_SRTM_data_V4_Tech_rep_International_Centre_for_Tropical_Agriculture_CIAT">
+		Article on SRTM</a></li>
+        <li><a href="https://sentinel.esa.int/documents/247904/685211/Sentinel-2-L2A-Data-Quality-Report">Sentinel-2-L2A Data Quality Report</a></li>
+      </article>
+      
+     <article class="column rightlist">
+        <h4>Organisation</h4>
+        <ul>
+          <li><a href="https://www.itc.nl">
+            <img src="images/itc-link.png" width="80" alt="some alt text"/>
+            <span>ITC Faculty, University of Twente</span>
+          </a></li>
+          
+        </ul>
+      </article>
+    </section>
+  </footer>    
+
+
+</body>
+</html>

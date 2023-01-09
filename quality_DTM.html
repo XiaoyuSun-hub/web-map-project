@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GFM Q3C1 Group one</title>
+  
+  <!-- styles -->
+ <!-- styles -->
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans|Baumans' type='text/css'>
+  <link rel="stylesheet" href="styles/reset.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="styles/main.css" type="text/css" media="screen" />  
+  <link rel="stylesheet" href="styles/viewer.css" type="text/css" media="screen"/>
+  <link rel="stylesheet" href="styles/ol3-layerswitcher.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="https://gisedu.itc.utwente.nl/exercise/libraries/openlayers/v4.6.4/ol.css" 
+    type="text/css"/> 
+ 
+
+  <!-- scripts -->
+  <script src="https://gisedu.itc.utwente.nl/exercise/libraries/openlayers/v4.6.4/ol.js"></script>  
+  <script src="scripts/viewer.js"></script> 
+  <script src="https://gisedu.itc.utwente.nl/exercise/libraries/d3js/v4.13.0/d3.min.js"></script>
+  <script src="https://gisedu.itc.utwente.nl/exercise/libraries/d3js/d3-tip_v4/d3-tip.js"></script>
+  <script src="scripts/ol3-layerswitcher.js"></script>
+   
+</head>
+ <body onload="init()">
+
+<div class="container header">
+    <header>
+      <!--<h1>A Website by GFM Group One</h1>-->
+      <h1>Quality - Digital Terrain Model</h1>
+	   <br>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li class ="active"><a href="quality_DTM.html">Quality of DTM</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+  </div>
+  
+<body onload="init()">
+<!--   <section class="container header">
+    <header>
+      <h1>Group one work show</h1>
+	  <br>
+     <nav>
+        <ul>
+          <li><a href=".">Home</a></li>
+          <li class="active"><a href="javascript:void(0)">Data Viewer</a></li>
+          <li><a href="javascript:void(0)">Examples</a></li>
+          <li><a href="javascript:void(0)">Contact</a></li>
+        </ul>
+      </nav> 
+    </header> -->
+  </section>
+
+ <section id="spacer">
+    <!-- Info Bar -->
+    <p></p>
+  </section> <!-- spacer -->
+ <br class='clear'>
+  <!-- Chart Section -->
+<!--   <section class="column">
+    <article id="bar_chart">
+      <h2>Bar Chart</h2>
+      <div id="chart_container"></div>
+    </article> 
+    <br class="clear"/>
+  </section> -->
+  <section class="one-column">
+ 
+  <section class="container">
+  <br>
+ 
+  <h2>Comparison Between Our DTM and DTM From SRTM</h2>
+  
+  <p>We download other data about the same area from the SRTM. This is a global DTM project that provided data with a resolution of 90m at the equator. The vertical error of this dataset is reported to be less than 16m. And because this dataset is a global scale dataset, there are several interpolations techniques used in the data, so it is hard to tell the exact accuracy of the dataset.</p>
+<p>Apparently, due to the pixel size, global data is not suitable for fine-scale research. And our DTM is much more precise and shows a lot of details. Besides, the SRTM data does not take the water area into account while our production does. Therefore, we have a minus value for the elevation.</p>
+</p>
+<br>
+<img src="images/comparison_DTM.png" alt="DTM comparison" style="width:800px;height:500px;"/>
+
+  
+
+<br>
+<br class='clear'>
+</div>
+</section>
+<section class="container">
+
+	<h2>Iteration Results</h2>
+	<p class="feature-text"></p>
+	<img src="images/iteration_results.jfif" alt="iteration results" style="width:750px;height:150px;"/>
+<br>
+</div>
+</section>
+<section class="container">
+	<h2>Matching Output quality:</h2>
+	<p class="feature-text"></p>
+	<img src="images/Output_quality.jfif" alt="output results" style="width:680px;height:280px;"/>
+
+<br class='clear'>
+</div>
+</section>
+<section class="container">
+
+<br>
+
+	<h2>Uncertainity:</h2>
+	<p class="feature-text">
+	The primary uncertainty source of the DTM we produced is the algorithm behind the software we used. 
+	The ERDAS IMAGINE uses the Enhanced Automatic Terrain Extraction module. Based on the parameters being set, the results will be different.
+</p>
+	<p class="feature-text">
+	In this assignment, we produce a two by two meters DTM based on two aerial images. It processed eight iterations and got a final RMSE 0.092. If we create the DTM based on more images, the accuracy will be higher, but at the same time, the processing time will be longer. And the number of GCP will also matter. The more GCPs we have, the more accurate the result we can get. But GCP also means the cost to do the measurement in the field. So there needs to be a balance between the two.
+	</p
+	</p>
+</section>
+</section>
+  <footer>
+    <!-- Copyright notice -->
+    <section id="copyright">
+      <div class="wrapper">
+        <div class="social">
+          <a href="https://mail.google.com/mail/"><img src="images/icon-link-3.png" alt="google plus" width="25"/></a>
+        </div>        &copy; Copyright 2019 by 
+        <a href="https://www.itc.nl/geoinformatics">MGEO - Geoinformatics Program</a>. 
+        All Rights Reserved.
+      </div>
+    </section> <!-- copyright -->
+
+    
+    <!-- Footer content -->
+    <section class="wrapper">
+      <article class="column">
+        <h4>About Us</h4>
+        A platform for featuring photogrammetric products for the geoinformation student community world-wide in association with ITC, University of Twente.
+      </article>
+      
+      <article class="column midlist">
+        <h4>Links & Citations</h4>
+        <ul>
+        <li><a href="https://cgiarcsi.community/data/srtm-90m-digital-elevation-database-v4-1/">Consortium for Spatial Information</a></li>
+        <li><a href="https://www.researchgate.net/publication/225091458_Hole-filled_seamless_SRTM_data_V4_Tech_rep_International_Centre_for_Tropical_Agriculture_CIAT">
+		Article on SRTM</a></li>
+         <li><a href="https://sentinel.esa.int/documents/247904/685211/Sentinel-2-L2A-Data-Quality-Report">Sentinel-2-L2A Data Quality Report</a></li>
+      </article>
+      
+     <article class="column rightlist">
+        <h4>Organisation</h4>
+        <ul>
+          <li><a href="https://www.itc.nl">
+            <img src="images/itc-link.png" width="80" alt="some alt text"/>
+            <span>ITC Faculty, University of Twente</span>
+          </a></li>
+          
+        </ul>
+      </article>
+    </section>
+  </footer>    
+
+
+</body>
+</html>
